@@ -97,7 +97,9 @@ body{
     display: flex;
     align-items: center;
     justify-content:flex-start;
+  
 }
+
 .card{
     background-color: white;
     max-width:35rem;
@@ -186,26 +188,31 @@ body{
     }
 
     .card1 a:hover{
-        animation: borderGrow 2s;
-        transition:color 5s;
-       
-
+    color: rgb(56, 55, 55);
+    transition:color 1s;
     }
 
-
+/*footer*/
 .links{
+    padding-top: 4rem;
     background-color: black;
     color:white
 }
+
 .inner-links{
-    max-width:100%;
+    width:100%;
     margin:0 auto;
     padding:0 3rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap:4rem;
-    align-items: flex-start;
+    gap:3rem;
+    align-items: center;
     justify-content: center;
+    
+}
+ 
+.first-list{
+    grid-column: 1/5;
 }
 .inner-links li{
     line-height: 2.5rem;
@@ -214,49 +221,36 @@ body{
 .inner-links li a{
     color:white;
 }
+ .social-links i{
+     color:white;
+     padding: 0.9rem;
+ }
 
 
-
-
-.footer{
-    background-color: black;
-    color:white;
-   padding:4rem 0;
-
+.copyright, .f-list{
+    font-size:0.8rem;
+    color:gray;
 }
-.footer-inner{
-    max-width:100%;
-    margin:0 auto;
-    padding:5rem 3rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:4rem;
-    align-items: flex-start;
-    justify-content: flex-start;
-  
-}
-.footer-inner .social-links {
-    padding: 0 2rem;
-    margin
-}
-
-.footer-inner .social-links a{
-    color: white;
-    padding: 0 0.5rem;
-
-}
-
-.footer-inner img{
-    width:8rem;
-    height:4rem ;
-    
-}
-.footer .copyrights{
+.f-list{
+    grid-column: 2/5;
     display: flex;
-    
+    justify-content: flex-end;
 }
+
+.f-list li{
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.f-images a{
+    width:0.5rem;
+    height:0.5rem;
+    
+} 
+
 
 @media (max-width:700px){
+
 .menu-btn{
     display: block;
 }
@@ -272,14 +266,20 @@ body{
     margin-right: 6rem;
 }
 
+.cards{
+        grid-template-columns:1fr;
+    }
+    .card{
+        margin: 0;
+    }
+footer{
+    padding-bottom: 4rem;
+}
 
-    .inner-links, .footer-inner {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .cards{
-        grid-template-columns: repeat(1, 1fr);
-    }
+/*Q-I tried too many time to make this work but it didnt and i dont know why!*/
+footer .inner-links{
+    grid-template-columns: 1fr;
+}
 }
 
 
